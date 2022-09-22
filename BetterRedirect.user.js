@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         BetterRedirect
-// @version      0.1.1
+// @version      0.1.2
 // @description  Redirect to alternative frontends
 // @author       pombadev
 // @match        https://*.tiktok.com/*
 // @match        https://twitter.com/*
+// @match        https://*.twitter.com/*
 // @match        https://*.reddit.com/*
 // @grant        window.onurlchange
 // @run-at       document-start
@@ -46,6 +47,7 @@
                     this.tiktok(url)
                     break
                 case "https://twitter.com":
+                case "https://mobile.twitter.com":
                     this.twitter(url)
                     break
                 case "https://www.reddit.com":
