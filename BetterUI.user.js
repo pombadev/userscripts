@@ -4,6 +4,7 @@
 // @match        https://*.ycombinator.com/*
 // @match        https://lobste.rs/*
 // @description  Remove bs from hackernews, lobster etc
+// @homepage     https://github.com/pombadev/userscripts
 // ==/UserScript==
 
 function nextSibbling(element) {
@@ -73,7 +74,7 @@ for (let link of document.links) {
         case "https://lobste.rs":
             // remove setting dark/light by website
             document.querySelector('html').classList.remove('color-scheme-system')
-            
+
             if (blacklists.some(blacklist => link.href.match(blacklist))) {
                 removeElements(link)
             }

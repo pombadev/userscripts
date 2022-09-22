@@ -8,9 +8,10 @@
 // @match        https://*.reddit.com/*
 // @grant        window.onurlchange
 // @run-at       document-start
+// @homepage     https://github.com/pombadev/userscripts
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     // More websites here:
@@ -51,7 +52,7 @@
                     Redirector.reddit(url)
                     break
                 default:
-                    // do nothing
+                // do nothing
             }
         }
     }
