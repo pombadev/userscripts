@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BetterRedirect
-// @version      0.1
+// @version      0.1.1
 // @description  Redirect to alternative frontends
 // @author       pombadev
 // @match        https://*.tiktok.com/*
@@ -43,13 +43,13 @@
         start(url = location.href) {
             switch (location.origin) {
                 case "https://www.tiktok.com":
-                    Redirector.tiktok(url)
+                    this.tiktok(url)
                     break
                 case "https://twitter.com":
-                    Redirector.twitter(url)
+                    this.twitter(url)
                     break
                 case "https://www.reddit.com":
-                    Redirector.reddit(url)
+                    this.reddit(url)
                     break
                 default:
                 // do nothing
